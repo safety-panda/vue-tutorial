@@ -1,0 +1,13 @@
+# macOS
+._*
+.DS_Store
+.fseventsd
+.Spotlight-V100
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
+
+# pycharm
+.idea
