@@ -8,16 +8,23 @@
 <body>
   <div id="app">
     <button @click="reveal" class="vue-btn">show me the secret number</button>
+    <br>
+    <button v-on:click="increase" class="vue-btn">Click to increase counter</button>
+    <p>You've clicked the button {{ counter }} times.</p>
   </div>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        secretNumber: Math.floor(Math.random() * 100) + 1
+        secretNumber: Math.floor(Math.random() * 100) + 1,
+        counter: 0
       },
       methods: {
         reveal() {
           alert(`the secret number is: ${this.secretNumber}`)
+        },
+        increase(e) {
+          this.counter++;
         }
       }
     })
