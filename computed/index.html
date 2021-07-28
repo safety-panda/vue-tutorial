@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue App</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+  <div id="app">
+    <span>Change the text</span>
+    <input v-model="inputText" placeholder="texty text" />
+    <p>the text in the input field is: {{ inputText }}</p>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        inputText: ''
+      }
+    })
+  </script>
+</body>
+</html>
